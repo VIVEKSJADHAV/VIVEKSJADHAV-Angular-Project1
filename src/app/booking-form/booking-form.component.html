@@ -1,0 +1,52 @@
+
+
+
+    <div class="container">
+
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+
+    <div class="elem-group inlined">
+        <label for="checkin">Check in</label>
+        <input type="date" class="form-control" formControlName="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkout">Check out</label>
+        <input type="date" class="form-control" formControlName="checkout" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkin">Adults (18+)</label>
+        <input type="number" class="form-control" formControlName="adults" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkout">Children(0-17)</label>
+        <input type="number" class="form-control" formControlName="children" required>
+    </div>
+    <div class="elem-group">
+        <label for="checkout">Room Type</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="single/sharing" required>
+      </div>
+
+      <div class="elem-group">
+        <label for="checkout">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="i.e name_abd@domain.com" required>
+      </div>
+
+      <div class="elem-group">
+        <label for="checkout">Phone Number</label>
+        <input type="tel" class="form-control" formControlName="phone" placeholder="i.e 10 digit mobile number" required>
+      </div>
+
+    <button type="submit" >Book Now</button>
+  </form>
+    </div>
+
+    <!-- Bootstrap Modal -->
+
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" (click)="closePopup()">&times;</span>
+      <p>Form submitted successfully!</p>
+      <button (click)="closePopup()">Close</button>
+    </div>
+  </div>
